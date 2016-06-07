@@ -1,0 +1,7 @@
+POST	/user			genapi.controller.UserController.createUser()
+GET		/user			genapi.controller.UserController.getAllUser()
+GET		/user/:id		genapi.controller.UserController.getUser(id: String)
+PUT		/user/:id		genapi.controller.UserController.updateUser(id: String)
+DELETE	/user/:id		genapi.controller.UserController.deleteUser(id: String)
+
+GET     /assets/*file	controllers.Assets.versioned(path="/public", file: Asset)
