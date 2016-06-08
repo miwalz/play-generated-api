@@ -1,10 +1,16 @@
 package genapi.controller;
 
 import org.bson.types.ObjectId;
+import org.mongodb.morphia.query.Query;
 import org.mongodb.morphia.query.QueryResults;
+import org.mongodb.morphia.query.UpdateOperations;
+
 import com.google.inject.Inject;
 
+import core.util.DBWrapper;
+import genapi.dao.PostDao;
 import genapi.dao.UserDao;
+import genapi.model.Post;
 import genapi.model.User;
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -19,6 +25,9 @@ public class UserController extends Controller {
 
 	@Inject
 	private UserDao userDao;
+
+	@Inject
+	private PostDao postDao;
 
 	public Result createUser() {
 		final User user = formFactory.form(User.class).bindFromRequest().get();
@@ -50,6 +59,22 @@ public class UserController extends Controller {
 	public Result deleteUser(String id) {
 		userDao.deleteById(id);
 		return ok(Json.toJson(id));
+	}
+
+	public Result addPost(String userId, String postId) {
+		final Post post = postDao.get(postId);
+		final Query<User> query = DBWrapper.datastore.createQuery(User.class).filter("_id ==", userId);
+		final UpdateOperations<User> operations = DBWrapper.datastore.createUpdateOperations(User.class).add("posts", post);
+		DBWrapper.datastore.update(query, operations);
+		return ok(Json.toJson(post));
+	}
+	
+	public Result removePost(String userId, String postId) {
+		final Post post = postDao.get(postId);
+		final Query<User> query = DBWrapper.datastore.createQuery(User.class).filter("_id ==", userId);
+		final UpdateOperations<User> operations = DBWrapper.datastore.createUpdateOperations(User.class).removeAll("posts", post);
+		DBWrapper.datastore.update(query, operations);
+		return ok(Json.toJson(postId));
 	}
 
 }
