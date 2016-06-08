@@ -17,3 +17,13 @@ public class Post extends BasicModel {
 		this.text = text;
 	}
 }
+
+/*
+
+DSL:
+
+MorphiaModel Post {
+	String text
+}
+
+*/

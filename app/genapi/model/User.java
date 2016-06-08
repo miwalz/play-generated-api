@@ -32,3 +32,14 @@ public class User extends BasicModel {
 		this.posts = posts;
 	}
 }
+
+/*
+
+DSL:
+
+MorphiaModel User {
+	String name
+	many reference Post posts OR many embedded Post posts
+}
+
+*/
