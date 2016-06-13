@@ -10,5 +10,6 @@ libraryDependencies ++= Seq(
   javaJdbc,
   cache,
   javaWs,
-  "org.mongodb.morphia" % "morphia" % "1.1.1"
+  "org.mongodb.morphia" % "morphia" % "1.1.1",
+  "org.eclipse.xtend" % "org.eclipse.xtend.lib" % "2.10.0"
 )

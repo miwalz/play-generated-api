@@ -1,0 +1,6 @@
+- validations: z.B. nur Großbuchstaben für Entities in DSL / kleinbuchstaben für attribute names
+- einzel referenzierte/embedded felder @Reference Post post z.B.
+- required attribute
+- zielpackages angeben können
+- output direkt in projekt möglich?
+- alle datentypen und java-objekte unterstützen

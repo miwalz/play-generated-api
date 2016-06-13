@@ -1,0 +1,19 @@
+datatype String
+datatype int
+
+morphiamodel Pet {
+	name: String
+	color: Color
+	many colors: Color
+	many embedded colorsEmb: Color
+	many strings: String
+	many embedded stringsEmb: String
+}
+
+morphiamodel Color {
+	name: String
+}
+
+morphiamodel Test {
+	count: int
+}
