@@ -1,6 +1,19 @@
-- validations: z.B. nur Großbuchstaben für Entities in DSL / kleinbuchstaben für attribute names
-- einzel referenzierte/embedded felder @Reference Post post z.B.
-- required attribute
-- zielpackages angeben können
-- output direkt in projekt möglich?
-- alle datentypen und java-objekte unterstützen
+- validations: 
+	- z.B. nur Großbuchstaben für Entities in DSL / kleinbuchstaben für attribute names
+	- kein reference keywort möglich bei einfachen datentypen: many reference myString: String soll nicht möglich sein
+- für präsi: 
+	- demo (rest test)
+	- ausblick: generierte rest-api-html-doc im swagger-stil / tests
+	
+	
+PRAESI
+===============================
+
+- einleitung (michi)
+	- warum kein spiel? inspiriert von rails
+- ausgangspunkt zeigen (wie kann der viele code reduziert werden) (max)
+- implementierung
+	- grammatik (max)
+	- hauptcontroller: wohin werden die drei models und die routes erstellt? --> unteraufgaben werden von Generatoren in enstprechenden packages übernommen (manu)
+- live demo (leere play app --> model reinladen --> erzeugen --> api testen (michi)
+- future: tests generieren / swagger generieren	(manu)

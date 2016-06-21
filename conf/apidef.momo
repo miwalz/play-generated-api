@@ -1,5 +1,8 @@
 datatype String
 datatype int
+datatype boolean
+datatype char
+datatype double
 
 morphiamodel Pet {
 	name: String
@@ -7,13 +10,18 @@ morphiamodel Pet {
 	many colors: Color
 	many embedded colorsEmb: Color
 	many strings: String
-	many embedded stringsEmb: String
+	many embedded stringsEmb: String // sollte nicht mit embedded möglich sein
 }
 
 morphiamodel Color {
 	name: String
+	testDatatypes: TestDatatype
 }
 
-morphiamodel Test {
-	count: int
+morphiamodel TestDatatype {
+	myString: String
+	myInt: int
+	myBool: boolean
+	myChar: char
+	myDouble: double
 }

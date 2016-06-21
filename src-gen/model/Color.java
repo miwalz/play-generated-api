@@ -20,4 +20,15 @@ public class Color extends BasicModel {
 	    this.name = name;
 	}
 		
+	@Reference
+	private TestDatatype testDatatypes;
+	
+	public TestDatatype getTestDatatypes() {
+	    return this.testDatatypes;
+	}
+	
+	public void setTestDatatypes(TestDatatype testDatatypes) {
+	    this.testDatatypes = testDatatypes;
+	}
+		
 }
