@@ -13,4 +13,4 @@ PRAESI
 	- grammatik (max) --> evtl noch vergleich zeilen .momo-datei vs. generierte zeilen
 	- hauptcontroller: wohin werden die drei models und die routes erstellt? --> unteraufgaben werden von Generatoren in enstprechenden packages übernommen (manu)
 - live demo (leere play app --> model reinladen --> erzeugen --> api testen (michi)
-- future: tests generieren / swagger generieren / datenbank-initialisierung/konfiguration generieren (manu)
+- future: tests generieren / swagger generieren / datenbank-initialisierung/konfiguration generieren / logging bzw. auditing (manu)

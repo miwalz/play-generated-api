@@ -1,27 +1,24 @@
 datatype String
 datatype int
 datatype boolean
-datatype char
-datatype double
+datatype Date
 
-morphiamodel Pet {
+morphiamodel Author {
 	name: String
-	color: Color
-	many colors: Color
-	many embedded colorsEmb: Color
-	many strings: String
-	many embedded stringsEmb: String // sollte nicht mit embedded möglich sein
+	born: java.util.Date 				// DATE
+	married: boolean
+	many articles: Article
+	many embedded books: Book
+	many aliases: String	
 }
 
-morphiamodel Color {
-	name: String
-	testDatatypes: TestDatatype
+morphiamodel Book {
+	title: String
+	isbn: String
+	pages: int
 }
 
-morphiamodel TestDatatype {
-	myString: String
-	myInt: int
-	myBool: boolean
-	myChar: char
-	myDouble: double
+morphiamodel Article {
+	title: String
+	many authors: Author
 }

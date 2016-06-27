@@ -7,8 +7,8 @@ import java.util.List;
 import org.mongodb.morphia.annotations.Embedded;
 import org.mongodb.morphia.annotations.Reference;
 
-@Entity("color")
-public class Color extends BasicModel {
+@Entity("user")
+public class user extends BasicModel {
 	
 	private String name;
 	
@@ -18,17 +18,6 @@ public class Color extends BasicModel {
 	
 	public void setName(String name) {
 	    this.name = name;
-	}
-		
-	@Reference
-	private TestDatatype testDatatypes;
-	
-	public TestDatatype getTestDatatypes() {
-	    return this.testDatatypes;
-	}
-	
-	public void setTestDatatypes(TestDatatype testDatatypes) {
-	    this.testDatatypes = testDatatypes;
 	}
 		
 }
