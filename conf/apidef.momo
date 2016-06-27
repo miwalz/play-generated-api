@@ -5,6 +5,7 @@ datatype int
 morphiamodel Author {
 	name: String
 	married: boolean
+	favouriteBook: Book
 	many articles: Article
 	many embedded books: Book
 	many aliases: String

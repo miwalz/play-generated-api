@@ -31,6 +31,17 @@ public class Author extends BasicModel {
 	}
 		
 	@Reference
+	private Book favouriteBook;
+	
+	public Book getFavouriteBook() {
+	    return this.favouriteBook;
+	}
+	
+	public void setFavouriteBook(Book favouriteBook) {
+	    this.favouriteBook = favouriteBook;
+	}
+		
+	@Reference
 	private List<Article> articles = new ArrayList<Article>();
 	
 	public List<Article> getArticles() {
