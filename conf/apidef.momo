@@ -1,15 +1,13 @@
 datatype String
-datatype int
 datatype boolean
-datatype Date
+datatype int
 
 morphiamodel Author {
 	name: String
-	born: java.util.Date 				// DATE
 	married: boolean
 	many articles: Article
 	many embedded books: Book
-	many aliases: String	
+	many aliases: String
 }
 
 morphiamodel Book {
